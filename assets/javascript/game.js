@@ -1,22 +1,33 @@
 //Global Variables
- var randomNum;
- var points;
+ var magicNum;
+ var points = 0;
  var wins;
  var losses;
+ var crystals = ["crystal1", "crystal2", "crystal3", "crystal4"];
+ var crystalIMG = ["assets/images/blue.png", "assets/images/red.png", "assets/images/purple.png", "assets/images/darkblue.png"]
 
-for (var i = 0; i < 4; i++) {
-    randomNum = Math.floor(Math.random() * 12);
-    var crystal = $("div>");
-    crystal.attr("class", 'uniqueCrystal');
-    $(crystal).attr("Value", randomNum);
-    console.log(randomNum);
+
+for (var i = 0; i < crystals.length; i++) {
+    var crystal = $("<img>");
+    crystal.addClass("uniqueCrystal");
+    crystal.attr("value", Math.floor(Math.random() * 12) + 1);
+    crystal.attr("src", crystalIMG[i]),
+    $(".crystals").append(crystal);
+    
 }
- 
-    $(".uniqueCrystal").on("click", function() {
-        var crystalNum = ($(".uniqueCrystal").append(randomNum));
-        console.log(crystalNum);
+    genMagicNum();
 
-    });
+function genMagicNum() {
+    var magicNum = Math.floor(Math.random() * 120) + 19;
+    console.log(magicNum)
+}
+
+$(".uniqueCrystal").on("click", function () {
+    points += parseInt($(this).attr("value"));
+    console.log=(points);
+ 
+ });
+ 
 
 //start game 
 //generate random number
