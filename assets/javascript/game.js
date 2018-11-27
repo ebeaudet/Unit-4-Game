@@ -1,6 +1,6 @@
 //Global Variables
  var magicNum;
- var points = 0;
+ var points;
  var wins;
  var losses;
  var crystals = ["crystal1", "crystal2", "crystal3", "crystal4"];
@@ -11,19 +11,20 @@ for (var i = 0; i < crystals.length; i++) {
     var crystal = $("<img>");
     crystal.addClass("uniqueCrystal");
     crystal.attr("value", Math.floor(Math.random() * 12) + 1);
-    crystal.attr("src", crystalIMG[i]),
+    crystal.attr("src", crystalIMG[i]);
     $(".crystals").append(crystal);
     
 }
     genMagicNum();
 
 function genMagicNum() {
-    var magicNum = Math.floor(Math.random() * 120) + 19;
+    magicNum = Math.floor(Math.random() * 120) + 19;
+    $(".magicNumber").append("Magic Number: " + magicNum);
     console.log(magicNum)
 }
 
 $(".uniqueCrystal").on("click", function () {
-    points += parseInt($(this).attr("value"));
+    points = parseInt($(this).attr("value"));
     console.log=(points);
  
  });
