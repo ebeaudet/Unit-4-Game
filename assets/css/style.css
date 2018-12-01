@@ -1,0 +1,17 @@
+
+body {
+    background-image: url("..mages/Crystal_Cave.jpg");
+}
+.gameName {
+    height:50px;
+    width:200px;
+    font: 72px;
+    color:blue;
+    }
+
+.directions {
+    height:50%;
+    width: 50%;
+    background-color: cadetblue;
+
+}

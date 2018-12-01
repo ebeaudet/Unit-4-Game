@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     var magicNum;
     var points = 0;
-    var wins;
+    var wins =0;
     var losses;
     var crystals = ["crystal1", "crystal2", "crystal3", "crystal4"];
     var crystalIMG = ["assets/images/blue.png", "assets/images/red.png", "assets/images/purple.png", "assets/images/darkblue.png"]
@@ -31,6 +31,8 @@ $(document).ready(function () {
         $(".totalScore").text("Total Score:" + points);
         if (points === magicNum) {
             alert("You Win!")
+            wins ++;
+            $(".wins").text("Wins:" + wins);
             genMagicNum();
             points = 0;
             $(".totalScore").text("Total Score:" + points);
