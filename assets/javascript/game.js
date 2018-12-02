@@ -32,7 +32,7 @@ $(document).ready(function () {
         if (points === magicNum) {
             alert("You Win!")
             wins ++;
-            $(".wins").text("Wins:" + wins);
+            $(".winsNum").text(wins);
             genMagicNum();
             points = 0;
             $(".totalScore").text("Total Score:" + points);

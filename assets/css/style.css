@@ -1,17 +1,36 @@
 
 body {
-    background-image: url("..mages/Crystal_Cave.jpg");
+    background-image: url("..images/Crystal_Cave.jpg");
 }
 .gameName {
     height:50px;
     width:200px;
     font: 72px;
-    color:blue;
+    color: rgb(54, 54, 172);
     }
 
 .directions {
-    height:50%;
-    width: 50%;
     background-color: cadetblue;
+    margin: 5px;
+}
 
+.wins {
+    height: 50px;
+    width: 200px;
+    background-color:  rgb(54, 54, 172);
+    margin: 5px;
+}
+
+.totalScore {
+    height: 50px;
+    width: 200px;
+    background-color:  rgb(52, 116, 66);
+    margin: 5px;
+}
+
+.magicNumber {
+    height: 50px;
+    width: 200px;
+    background-color: rgb(234, 236, 96);
+    margin: 5px;
 }
